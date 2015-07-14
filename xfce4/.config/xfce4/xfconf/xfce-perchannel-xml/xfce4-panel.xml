@@ -54,6 +54,7 @@
         <value type="string" value="xfce4-power-manager"/>
         <value type="string" value="insync.py"/>
         <value type="string" value="xnoise"/>
+        <value type="string" value="bluetooth"/>
         <value type="string" value="banshee"/>
         <value type="string" value="blueberry-tray.py"/>
       </property>
