@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<channel name="parole" version="1.0">
+  <property name="subtitles" type="empty">
+    <property name="font" type="string" value="Sans Bold 20"/>
+  </property>
+  <property name="folders" type="empty">
+    <property name="last-used-media" type="string" value="/home/christian/Videos/Webcam"/>
+  </property>
+  <property name="window" type="empty">
+    <property name="width" type="int" value="760"/>
+    <property name="height" type="int" value="420"/>
+  </property>
+  <property name="audio" type="empty">
+    <property name="volume" type="int" value="36"/>
+  </property>
+</channel>
