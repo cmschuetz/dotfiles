@@ -1,5 +1,5 @@
 favorites=exo-terminal-emulator.desktop,exo-file-manager.desktop,exo-mail-reader.desktop,exo-web-browser.desktop
-recent=blueberry.desktop,google-chrome-unstable.desktop,xfce-session-settings.desktop,termite.desktop,pgadmin3.desktop,pavucontrol.desktop,xnoise.desktop,jetbrains-idea.desktop,brackets.desktop,filezilla.desktop
+recent=xfce-session-settings.desktop,blueberry.desktop,google-chrome-unstable.desktop,termite.desktop,pgadmin3.desktop,pavucontrol.desktop,xnoise.desktop,jetbrains-idea.desktop,brackets.desktop,filezilla.desktop
 button-title=Applications Menu
 button-icon=/home/christian/Pictures/Icons/Arch-linux-logo.png
 button-single-row=false

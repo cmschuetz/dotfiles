@@ -1,5 +1,11 @@
 #! /bin/sh
 
+ws1=
+ws2=
+ws3=
+ws4=
+ws5=
+
 bspc config border_width        2
 bspc config window_gap         12
 
@@ -9,13 +15,13 @@ bspc config gapless_monocle       true
 bspc config focus_by_distance     true
 bspc config focus_follows_pointer true
 
-bspc monitor DVI-D-0 -d I II III IV V
+bspc monitor DVI-D-0 -d $ws1 $ws2 $ws3 $ws4 $ws5
 bspc monitor DVI-D-1 -d VI VII VIII IX X
 
 bspc rule -a feh floating=on
 bspc rule -a Steam floating=on
 bspc rule -a Gimp desktop=^8 follow=on floating=on
-bspc rule -a blueberry floating=on
+bspc rule -a Bluetooth floating=on
 bspc rule -a thunar floating=on
 bspc rule -a mplayer2 floating=on
 bspc rule -a Kupfer.py focus=on
