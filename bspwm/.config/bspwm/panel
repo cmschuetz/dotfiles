@@ -1,6 +1,6 @@
 #! /bin/sh
 PANEL_FIFO=/tmp/panel-fifo
-PANEL_HEIGHT=35
+PANEL_HEIGHT=30
 ICON_FONT="FontAwesome:size=11"
 
 if [ $(pgrep -cx panel) -gt 1 ] ; then
@@ -16,6 +16,21 @@ mkfifo "$PANEL_FIFO"
 bspc config top_padding $PANEL_HEIGHT
 bspc control --subscribe > "$PANEL_FIFO" &
 xtitle -sf 'T%s' > "$PANEL_FIFO" &
+
+# clock
+while true;
+do
+	echo 'C ' $(date +"%l:%M %p");
+	sleep 5;
+done > "$PANEL_FIFO" &
+
+# date
+while true;
+do
+	echo 'D ' $(date +'%b %d')
+	sleep 5
+done > $PANEL_FIFO &
+
 clock -sf 'S%a %H:%M' > "$PANEL_FIFO" &
 
 . panel_colors

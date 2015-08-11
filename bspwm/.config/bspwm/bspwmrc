@@ -19,7 +19,7 @@ bspc monitor DVI-D-0 -d $ws1 $ws2 $ws3 $ws4 $ws5
 bspc monitor DVI-D-1 -d VI VII VIII IX X
 
 bspc rule -a feh floating=on
-bspc rule -a Steam floating=on
+bspc rule -a Steam desktop=^4 floating=on
 bspc rule -a Gimp desktop=^8 follow=on floating=on
 bspc rule -a Bluetooth floating=on
 bspc rule -a thunar floating=on

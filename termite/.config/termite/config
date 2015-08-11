@@ -2,8 +2,11 @@
 browser = chromium
 clickable_url = true
 
-[colors]
+# Fonts
+font = FontAwesome 11
+font = Droid Sans Mono 11
 
+[colors]
 color0 = #89bfc9
 color1 = #7da5a7
 color2 = #1c3a44
