@@ -1,10 +1,12 @@
 #! /bin/sh
 
-ws1=
-ws2=
-ws3=
-ws4=
-ws5=
+term=
+code=
+chrome=
+steam=
+empire=
+
+bspc monitor -d $term $code $chrome $steam $empire
 
 bspc config border_width        2
 bspc config window_gap         12
@@ -14,9 +16,6 @@ bspc config borderless_monocle    true
 bspc config gapless_monocle       true
 bspc config focus_by_distance     true
 bspc config focus_follows_pointer true
-
-bspc monitor DVI-D-0 -d $ws1 $ws2 $ws3 $ws4 $ws5
-bspc monitor DVI-D-1 -d VI VII VIII IX X
 
 bspc rule -a feh floating=on
 bspc rule -a Steam desktop=^4 floating=on

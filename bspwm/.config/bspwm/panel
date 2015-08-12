@@ -1,7 +1,7 @@
 #! /bin/sh
 PANEL_FIFO=/tmp/panel-fifo
 PANEL_HEIGHT=30
-ICON_FONT="FontAwesome:size=11"
+ICON_FONT="FontAwesome:size=14"
 
 if [ $(pgrep -cx panel) -gt 1 ] ; then
 	printf "%s\n" "The panel is already running." >&2
@@ -31,7 +31,18 @@ do
 	sleep 5
 done > $PANEL_FIFO &
 
-clock -sf 'S%a %H:%M' > "$PANEL_FIFO" &
+# volume
+while true;
+do
+	level=$(amixer get Master | tail -n 1 | cut -d '[' -f 2 | sed 's/].*//g')
+	status=$(amixer get Master | tail -n 1 | cut -d '[' -f 3 | sed 's/].*//g')
+	if [ $status == "on" ]; then
+		echo 'V ' $level
+	else
+		echo 'V ' $level
+	fi
+	sleep 0.1
+done > $PANEL_FIFO &
 
 . panel_colors
 

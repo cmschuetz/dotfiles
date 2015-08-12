@@ -9,10 +9,6 @@ PAD=" "
 
 while read -r line ; do
 	case $line in
-		S*)
-			# clock output
-			sys_infos="%{F$COLOR_STATUS_FG}%{B$COLOR_STATUS_BG} ${line#?} %{B-}%{F-}"
-			;;
 		T*)
 			# xtitle output
 			title="%{F$COLOR_TITLE_FG}%{B$COLOR_TITLE_BG} ${line#?} %{B-}%{F-}"
@@ -24,6 +20,10 @@ while read -r line ; do
 		D*)
 			# date
 			date="$PAD${line#?}$PAD"
+			;;
+		V*)
+			# volume
+			volume="$PAD${line#?}$PAD"
 			;;
 		W*)
 			# bspwm internal state
@@ -70,14 +70,10 @@ while read -r line ; do
 						# urgent desktop
 						wm_infos="${wm_infos}%{F$COLOR_URGENT_FG}%{B$COLOR_URGENT_BG} ${name} %{B-}%{F-}"
 						;;
-					L*)
-						# layout
-						wm_infos="$wm_infos  %{F$COLOR_LAYOUT_FG}%{B$COLOR_LAYOUT_BG} ${name} %{B-}%{F-}"
-						;;
 				esac
 				shift
 			done
 			;;
 	esac
-	printf "%s\n" "%{l}${wm_infos}%{c}${title}%{r}${date}${clock}"
+	printf "%s\n" "%{l}${wm_infos}%{c}${title}%{r}${volume}${date}${clock}"
 done

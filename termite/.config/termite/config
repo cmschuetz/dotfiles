@@ -7,22 +7,23 @@ font = FontAwesome 11
 font = Droid Sans Mono 11
 
 [colors]
-color0 = #89bfc9
-color1 = #7da5a7
-color2 = #1c3a44
-color3 = #667534
-color4 = #354626
-color5 = #545c20
-color6 = #7b9453
-color7 = #8aa323
-color8 = #424d47
-color9 = #829600
-color10 = #d5d176
-color11 = #899b73
-color12 = #6a820a
-color13 = #414e08
-color14 = #9da64d
-color15 = #708f94
+color0 = #01143f
+color1 = #00295d
+color2 = #024c89
+color3 = #206296
+color4 = #2d79aa
+color5 = #4093bd
+color6 = #59b0cc
+color7 = #4f9fff
+color8 = #71deff
+color9 = #69bfee
+color10 = #00a5ff
+color11 = #6894ad
+color12 = #99b1cb
+color13 = #1a70c3
+color14 = #3a8ee4
+color15 = #0d3d6e
+
 
 
 # 5% transparency
