@@ -1,0 +1,11 @@
+#Set up displays
+~/.screenlayout/monitors.sh
+
+#background
+~/.fehbg &
+
+#Fix java bug
+wmname LG3D &
+
+#Compositing
+compton -b &
