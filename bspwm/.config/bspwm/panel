@@ -34,8 +34,8 @@ done > $PANEL_FIFO &
 # volume
 while true;
 do
-	level=$(amixer get Master | tail -n 1 | cut -d '[' -f 2 | sed 's/].*//g')
-	status=$(amixer get Master | tail -n 1 | cut -d '[' -f 3 | sed 's/].*//g')
+	level=$(amixer -M get Master | tail -n 1 | cut -d '[' -f 2 | sed 's/].*//g')
+	status=$(amixer -M get Master | tail -n 1 | cut -d '[' -f 4 | sed 's/].*//g')
 	if [ $status == "on" ]; then
 		echo 'V ' $level
 	else
