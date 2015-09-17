@@ -45,16 +45,16 @@ do
 done > $PANEL_FIFO &
 
 # wifi
-adapter=$(iw dev)
-if [ -n "$adapter" ]; then
-	while true;
-	do
-		wifi_ssid=$(iw wlp3s0 link | grep 'SSID' | sed 's/SSID: //' | sed 's/\t//')
-		wifi_signal=$(iw wlp3s0 link | grep 'signal' | sed 's/signal: //' | sed 's/ dBm//' | sed 's/\t//')
+while true;
+do
+	adapter=$(iw dev | grep 'Interface' | sed 's/Interface //' | sed 's/\t//')
+	if [ -n "$adapter" ]; then
+		wifi_ssid=$(iw "$adapter" link | grep 'SSID' | sed 's/SSID: //' | sed 's/\t//')
+		wifi_signal=$(iw "$adapter" link | grep 'signal' | sed 's/signal: //' | sed 's/ dBm//' | sed 's/\t//')
 		echo L'' $wifi_ssid '|' $wifi_signal
 		sleep 10
-	done > $PANEL_FIFO &
-fi
+	fi
+done > $PANEL_FIFO &
 
 . panel_colors
 
