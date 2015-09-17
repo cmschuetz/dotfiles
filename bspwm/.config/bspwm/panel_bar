@@ -25,6 +25,10 @@ while read -r line ; do
 			# volume
 			volume="$PAD${line#?}$PAD"
 			;;
+		L*)
+			# wifi link
+			wifi="$PAD${line#?}$PAD"
+			;;
 		W*)
 			# bspwm internal state
 			wm_infos=""
@@ -75,5 +79,5 @@ while read -r line ; do
 			done
 			;;
 	esac
-	printf "%s\n" "%{l}${wm_infos}%{c}${title}%{r}${volume}${date}${clock}"
+	printf "%s\n" "%{l}${wm_infos}%{c}${title}%{r}${wifi}${volume}${date}${clock}"
 done
