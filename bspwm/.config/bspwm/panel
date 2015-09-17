@@ -52,8 +52,10 @@ do
 		wifi_ssid=$(iw "$adapter" link | grep 'SSID' | sed 's/SSID: //' | sed 's/\t//')
 		wifi_signal=$(iw "$adapter" link | grep 'signal' | sed 's/signal: //' | sed 's/ dBm//' | sed 's/\t//')
 		echo L'' $wifi_ssid '|' $wifi_signal
-		sleep 10
+	else
+		echo L''
 	fi
+	sleep 10
 done > $PANEL_FIFO &
 
 . panel_colors
