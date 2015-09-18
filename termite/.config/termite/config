@@ -3,8 +3,8 @@ browser = chromium
 clickable_url = true
 
 # Fonts
-font = FontAwesome 11
-font = Droid Sans Mono 11
+#font = DejaVu Sans Mono 12
+font = Fira Mono 12
 
 [colors]
 color0 = #01143f
