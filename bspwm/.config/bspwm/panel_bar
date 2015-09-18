@@ -26,8 +26,12 @@ while read -r line ; do
 			volume="$PAD${line#?}$PAD"
 			;;
 		L*)
-			# wifi link
+			# wifi
 			wifi="$PAD${line#?}$PAD"
+			;;
+		B*)
+			# battery percent output
+			battery="%{A:bat.sh:}$PAD${line#?}$PAD%{A}"
 			;;
 		W*)
 			# bspwm internal state
@@ -79,5 +83,5 @@ while read -r line ; do
 			done
 			;;
 	esac
-	printf "%s\n" "%{l}${wm_infos}%{c}${title}%{r}${wifi}${volume}${date}${clock}"
+	printf "%s\n" "%{l}${wm_infos}%{c}${title}%{r}${battery}${wifi}${volume}${date}${clock}"
 done

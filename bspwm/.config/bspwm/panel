@@ -58,8 +58,22 @@ do
 	sleep 10
 done > $PANEL_FIFO &
 
+# battery
+while true;
+do
+	batt_level=$(acpi -b | grep -o '[[:digit:]]\+%' | sed 's/%//')
+	if [ $batt_level -ge 80 ]; then
+			echo 'B\uf116' $batt_level%
+	elif [ $batt_level -ge 30 -a $batt_level -lt 80 ]; then
+			echo 'B\uf117' $batt_level%
+	else
+			echo 'B%{T3}\uf243%{T1}' $batt_level%
+	fi
+	sleep 30;
+done > "$PANEL_FIFO" &
+
 . panel_colors
 
-cat "$PANEL_FIFO" | panel_bar | lemonbar -g x$PANEL_HEIGHT -f "$PANEL_FONT_FAMILY" -f "$ICON_FONT" -F "$COLOR_FOREGROUND" -B "$COLOR_BACKGROUND" &
+cat "$PANEL_FIFO" | panel_bar | lemonbar -g x$PANEL_HEIGHT -f "$PANEL_FONT_FAMILY" -f "$ICON_FONT" -F "$COLOR_FOREGROUND" -B "$COLOR_BACKGROUND" -u 2 | zsh &
 
 wait
