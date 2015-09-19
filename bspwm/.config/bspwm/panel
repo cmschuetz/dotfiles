@@ -61,14 +61,22 @@ done > $PANEL_FIFO &
 # battery
 while true;
 do
-	batt_level=$(acpi -b | grep -o '[[:digit:]]\+%' | sed 's/%//')
-	if [ $batt_level -ge 80 ]; then
-			echo 'B\uf116' $batt_level%
-	elif [ $batt_level -ge 30 -a $batt_level -lt 80 ]; then
-			echo 'B\uf117' $batt_level%
-	else
-			echo 'B%{T3}\uf243%{T1}' $batt_level%
-	fi
+  if hash acpi 2>/dev/null; then
+	  batt_level=$(acpi -b | grep -o '[[:digit:]]\+%' | sed 's/%//')
+	  if [ $batt_level -ge 80 ]; then
+		  echo B'' $batt_level%
+	  elif [ $batt_level -ge 60 -a $batt_level -lt 80 ]; then
+			echo B'' $batt_level%
+    elif [ $batt_level -ge 40 -a $batt_level -lt 60 ]; then
+      echo B'' $batt_level%
+    elif [ $batt_level -ge 20 -a $batt_level -lt 40 ]; then
+      echo B'' $batt_level%
+	  else
+			echo B'' $batt_level%
+    fi
+  else
+    echo B''
+  fi
 	sleep 30;
 done > "$PANEL_FIFO" &
 
