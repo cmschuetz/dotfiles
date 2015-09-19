@@ -49,11 +49,21 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
-autocmd vimenter * NERDTree
+
+" Tabs
+set tabstop=2
+set softtabstop=2
+set expandtab
+set shiftwidth=2
+set smarttab
 
 " Colorscheme & Syntax
 syntax on
 colo Tomorrow-Night 
 
 " NERDTree
+autocmd vimenter * NERDTree
 let NERDTreeShowHidden=1
+
+" Misc
+set number
