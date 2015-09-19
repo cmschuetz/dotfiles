@@ -9,9 +9,12 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'scrooloose/nerdtree'
 
-" Color & Syntax
+" Util
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/syntastic'
+
+" Color 
 Plugin 'flazz/vim-colorschemes'
 Plugin 'gosukiwi/vim-atom-dark'
 Plugin 'trusktr/seti.vim'
@@ -50,7 +53,7 @@ autocmd vimenter * NERDTree
 
 " Colorscheme & Syntax
 syntax on
-colo onedark
+colo Tomorrow-Night 
 
 " NERDTree
 let NERDTreeShowHidden=1
