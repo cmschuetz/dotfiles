@@ -85,7 +85,7 @@ while read -r line ; do
 	esac
   sys_tray='' 
   sys_tray_arr=( ${battery} ${wifi} ${volume} ${date} )
-  separator='  /  ' 
+  separator=' / ' 
   #zsh arrays are 1 indexed for whatever reason
   for i in "${sys_tray_arr[@]}";
   do
