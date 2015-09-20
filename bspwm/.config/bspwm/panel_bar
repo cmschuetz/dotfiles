@@ -15,23 +15,23 @@ while read -r line ; do
 			;;
 		C*)
 			# clock
-			clock="$PAD${line#?}$PAD"
+			clock="${line#?}"
 			;;
 		D*)
 			# date
-			date="$PAD${line#?}$PAD"
+			date="${line#?}"
 			;;
 		V*)
 			# volume
-			volume="$PAD${line#?}$PAD"
+			volume="${line#?}"
 			;;
 		L*)
 			# wifi
-			wifi="$PAD${line#?}$PAD"
+			wifi="${line#?}"
 			;;
 		B*)
 			# battery percent output
-			battery="%{A:bat.sh:}$PAD${line#?}$PAD%{A}"
+			battery="${line#?}"
 			;;
 		W*)
 			# bspwm internal state
@@ -40,7 +40,7 @@ while read -r line ; do
 			set -- ${line#?}
 			while [ $# -gt 0 ] ; do
 				item=$1
-				name="$PAD${item#?}$PAD"
+				name="${item#?}"
 				case $item in
 					# M*)
 					# 	# active monitor
@@ -83,5 +83,16 @@ while read -r line ; do
 			done
 			;;
 	esac
-	printf "%s\n" "%{l}${wm_infos}%{c}${title}%{r}${battery}${wifi}${volume}${date}${clock}"
+  sys_tray='' 
+  sys_tray_arr=( ${battery} ${wifi} ${volume} ${date} )
+  separator='  /  ' 
+  #zsh arrays are 1 indexed for whatever reason
+  for i in "${sys_tray_arr[@]}";
+  do
+    if [ -n "$i" ]; then
+      sys_tray=${sys_tray}${i}${separator}
+    fi
+  done
+  sys_tray=${sys_tray}${clock}${PAD} 
+	printf "%s\n" "%{l}${wm_infos}%{c}${title}%{r}${sys_tray}"
 done

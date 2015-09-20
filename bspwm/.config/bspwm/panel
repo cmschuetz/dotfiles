@@ -1,6 +1,7 @@
 #! /bin/sh
 PANEL_FIFO=/tmp/panel-fifo
 PANEL_HEIGHT=30
+FONT="FiraMono:size=12"
 ICON_FONT="FontAwesome:size=14"
 
 if [ $(pgrep -cx panel) -gt 1 ] ; then
@@ -20,14 +21,14 @@ xtitle -sf 'T%s' > "$PANEL_FIFO" &
 # clock
 while true;
 do
-	echo 'C ' $(date +"%l:%M %p");
+	echo 'C' $(date +"%l:%M %p");
 	sleep 5;
 done > "$PANEL_FIFO" &
 
 # date
 while true;
 do
-	echo 'D ' $(date +'%b %d')
+	echo 'D' $(date +'%b %d')
 	sleep 5
 done > $PANEL_FIFO &
 
@@ -37,9 +38,9 @@ do
 	level=$(amixer -M get Master | tail -n 1 | cut -d '[' -f 2 | sed 's/].*//g')
 	status=$(amixer -M get Master | tail -n 1 | cut -d '[' -f 4 | sed 's/].*//g')
 	if [ $status == "on" ]; then
-		echo 'V ' $level
+		echo 'V' $level
 	else
-		echo 'V ' $level
+		echo 'V' $level
 	fi
 	sleep 0.1
 done > $PANEL_FIFO &
@@ -82,6 +83,6 @@ done > "$PANEL_FIFO" &
 
 . panel_colors
 
-cat "$PANEL_FIFO" | panel_bar | lemonbar -g x$PANEL_HEIGHT -f "$PANEL_FONT_FAMILY" -f "$ICON_FONT" -F "$COLOR_FOREGROUND" -B "$COLOR_BACKGROUND" -u 2 | zsh &
+cat "$PANEL_FIFO" | panel_bar | lemonbar -g x$PANEL_HEIGHT -f "$FONT" -f "$ICON_FONT" -F "$COLOR_FOREGROUND" -B "$COLOR_BACKGROUND" -u 2 | zsh &
 
 wait
