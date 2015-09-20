@@ -6,7 +6,13 @@ chrome=
 steam=
 empire=
 
-bspc monitor -d $term $code $chrome $steam $empire
+num_mon=$(bspc query -M | wc -l)
+if [ num_mon == 1 ]; then
+  bspc monitor -d $term $code $chrome $steam 
+else
+  bspc monitor DVI-D-0 -d $term $code $steam
+  bspc monitor DVI-D-1 -d $chrome $empire
+fi
 
 bspc config border_width        2
 bspc config window_gap         12
