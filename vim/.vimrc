@@ -12,6 +12,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 " Util
 Plugin 'scrooloose/nerdtree'
+Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'scrooloose/syntastic'
 
 " Color 
