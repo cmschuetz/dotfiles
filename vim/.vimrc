@@ -65,6 +65,9 @@ colo Tomorrow-Night
 " NERDTree
 autocmd vimenter * NERDTree
 let NERDTreeShowHidden=1
+map <Leader>n <plug>NERDTreeTabsToggle<CR>
+"let NERDTreeMapOpenInTab='<ENTER>'
 
 " Misc
 set number
+set mouse=nicr
