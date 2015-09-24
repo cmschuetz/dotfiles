@@ -8,7 +8,7 @@ empire=
 
 num_mon=$(bspc query -M | wc -l)
 if [ $num_mon -eq 1 ]; then
-  bspc monitor -d $term $code $chrome $steam 
+  bspc monitor -d $term $code $chrome $steam
 else
   bspc monitor DVI-D-0 -d $term $code $steam
   bspc monitor DVI-D-1 -d $chrome $empire
@@ -33,4 +33,6 @@ bspc rule -a mplayer2 floating=on
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
 
-panel &
+if hash panel 2>/dev/null; then
+  panel &
+fi

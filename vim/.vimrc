@@ -28,10 +28,12 @@ Plugin 'tpope/vim-fugitive'
 " Ruby
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-bundler'
 
 " Javascript
 Plugin 'othree/yajs.vim'
 Plugin 'mxw/vim-jsx'
+Plugin 'elzr/vim-json'
 
 " Scala
 Plugin 'derekwyatt/vim-scala'
