@@ -15,6 +15,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'scrooloose/syntastic'
 Plugin 'bling/vim-airline'
+Plugin 'jiangmiao/auto-pairs'
 
 " Color 
 Plugin 'flazz/vim-colorschemes'
