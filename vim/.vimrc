@@ -14,6 +14,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'scrooloose/syntastic'
+Plugin 'bling/vim-airline'
 
 " Color 
 Plugin 'flazz/vim-colorschemes'
