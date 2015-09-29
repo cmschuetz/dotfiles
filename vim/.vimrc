@@ -75,3 +75,4 @@ map <Leader>n <plug>NERDTreeTabsToggle<CR>
 " Misc
 set number
 set mouse=nicr
+set backspace=indent,eol,start
