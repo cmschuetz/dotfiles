@@ -323,11 +323,11 @@
 	<key>NSTableView Sort Ordering KeyBingingTable</key>
 	<array/>
 	<key>NSWindow Frame Preferences</key>
-	<string>322 269 924 485 0 0 1440 877 </string>
+	<string>622 393 924 485 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 467 570 401 0 0 1440 877 </string>
+	<string>0 499 570 401 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>568 408 570 451 0 0 1440 877 </string>
+	<string>0 11 1914 1046 0 0 1920 1057 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -893,9 +893,9 @@
 			<key>Screen</key>
 			<integer>-1</integer>
 			<key>Scrollback Lines</key>
-			<integer>1000</integer>
+			<integer>0</integer>
 			<key>Scrollback With Status Bar</key>
-			<false/>
+			<true/>
 			<key>Scrollback in Alternate Screen</key>
 			<true/>
 			<key>Selected Text Color</key>
@@ -1037,7 +1037,7 @@
 			<key>Triggers</key>
 			<array/>
 			<key>Unlimited Scrollback</key>
-			<false/>
+			<true/>
 			<key>Use Bold Font</key>
 			<true/>
 			<key>Use Bright Bold</key>
@@ -1847,7 +1847,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2015-09-28T02:53:09Z</date>
+	<date>2015-09-30T17:59:44Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>
@@ -1884,6 +1884,10 @@
 	<integer>0</integer>
 	<key>WordCharacters</key>
 	<string>/-+\~_.</string>
+	<key>findIgnoreCase_iTerm</key>
+	<true/>
+	<key>findRegex_iTerm</key>
+	<false/>
 	<key>iTerm Version</key>
 	<string>2.1.1</string>
 </dict>
