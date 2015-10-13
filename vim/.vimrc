@@ -17,6 +17,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'bling/vim-airline'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'wincent/command-t'
 
 " Color 
 Plugin 'flazz/vim-colorschemes'
