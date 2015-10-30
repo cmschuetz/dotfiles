@@ -68,6 +68,10 @@ set smarttab
 syntax on
 colo Tomorrow-Night 
 
+" Search Highlighting
+set incsearch
+set hlsearch
+
 " NERDTree
 autocmd vimenter * NERDTree
 let NERDTreeShowHidden=1
