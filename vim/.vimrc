@@ -16,7 +16,7 @@ Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'scrooloose/syntastic'
 Plugin 'bling/vim-airline'
 Plugin 'jiangmiao/auto-pairs'
-" Plugin 'Valloric/YouCompleteMe'
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'wincent/command-t'
 
 " Color 
@@ -63,6 +63,8 @@ set softtabstop=2
 set expandtab
 set shiftwidth=2
 set smarttab
+command! -range=% -nargs=0 Space2Tab execute '<line1>,<line2>s#^\( \{'.&ts.'\}\)\+#\=repeat("\t", len(submatch(0))/' . &ts . ')'
+command! -range=% -nargs=0 Tab2Space execute '<line1>,<line2>s#^\t\+#\=repeat(" ", len(submatch(0))*' . &ts . ')'
 
 " Colorscheme & Syntax
 syntax on
@@ -82,3 +84,4 @@ map <Leader>n <plug>NERDTreeTabsToggle<CR>
 set number
 set mouse=nicr
 set backspace=indent,eol,start
+set clipboard=unnamed
