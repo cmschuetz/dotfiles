@@ -1,6 +1,10 @@
 #Set up displays
 ~/.screenlayout/monitors.sh
 
+#GTK
+export GTK2_RC_FILES=/usr/share/themes/Arc-Flatabulous-Dark/gtk-2.0/gtkrc
+export GTK_THEME=Arc-Flatabulous-Dark
+
 #background
 ~/.fehbg &
 

@@ -1,0 +1,18 @@
+# min = 5
+# max = 40
+remove-empty = true
+append-when-occupied = true
+watch-config = true
+renamers = ["classified", "client", "constant"]
+
+[names]
+constant = ""
+
+[[names.classified]]
+"" = ["Code"]
+
+[[names.classified]]
+"" = ["Termite", "Alacritty", "URxvt"]
+
+[[names.classified]]
+web = ["Chromium", "Firefox"]
