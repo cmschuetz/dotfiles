@@ -9,10 +9,28 @@ renamers = ["classified", "client", "constant"]
 constant = ""
 
 [[names.classified]]
+"" = ["Chromium", "Google-chrome-unstable"]
+
+[[names.classified]]
+"" = ["Firefox"]
+
+[[names.classified]]
+"" = ["Steam"]
+
+[[names.classified]]
+"" = ["Dolphin-emu"]
+
+[[names.classified]]
+"" = ["streamlink-twitch-gui"]
+
+[[names.classified]]
+"" = ["discord"]
+
+[[names.classified]]
 "" = ["Code"]
 
 [[names.classified]]
 "" = ["Termite", "Alacritty", "URxvt"]
 
 [[names.classified]]
-web = ["Chromium", "Firefox"]
+"" = ["Thunar"]

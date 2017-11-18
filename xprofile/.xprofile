@@ -1,12 +1,15 @@
 #Set up displays
 ~/.screenlayout/monitors.sh
 
+# Wallpaper & colors
+wal -t -R
+
 #GTK
 export GTK2_RC_FILES=/usr/share/themes/Arc-Flatabulous-Dark/gtk-2.0/gtkrc
 export GTK_THEME=Arc-Flatabulous-Dark
 
 #background
-~/.fehbg &
+#~/.fehbg &
 
 #Fix java bug
 wmname LG3D &
