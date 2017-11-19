@@ -1,7 +1,8 @@
 #! /bin/sh
 
 sxhkd &
-polybar example &
+polybar primary &
+polybar secondary &
 btops &
 
 bspc config border_width        2

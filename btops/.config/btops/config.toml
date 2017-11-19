@@ -1,5 +1,3 @@
-# min = 5
-# max = 40
 remove-empty = true
 append-when-occupied = true
 watch-config = true
