@@ -11,6 +11,9 @@ export GTK_THEME=Arc-Flatabulous-Dark
 #background
 #~/.fehbg &
 
+# Prevent screen blanking
+xset s off -dpms &
+
 #Fix java bug
 wmname LG3D &
 
