@@ -2,4 +2,4 @@
 
 pkill polybar
 MONITOR=$(archieb monitors primary) polybar primary &
-(archieb monitors secondary | while read -r monitor ; do MONITOR=$monitor polybar secondary & ; done) &
+(archieb monitors secondary | while read -r monitor ; do (MONITOR=$monitor polybar secondary &) ; done) &
