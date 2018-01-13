@@ -73,11 +73,11 @@ cursor-scroll = ns-resize
 
 [bar/primary]
 inherit = bar/base
-monitor = HDMI-0
+monitor = ${env:MONITOR}
 
 [bar/secondary]
 inherit = bar/base
-monitor = ${env:MONITOR:DVI-D-1}
+monitor = ${env:MONITOR}
 
 modules-left = bspwm
 modules-center = 
