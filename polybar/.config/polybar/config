@@ -49,7 +49,7 @@ font-1 = "FontAwesome:pixelsize=11;2"
 
 
 modules-left = bspwm
-modules-center = 
+modules-center =
 modules-right = filesystem xbacklight volume xkeyboard memory cpu wlan battery date powermenu
 
 # tray-position = right
@@ -57,7 +57,7 @@ modules-right = filesystem xbacklight volume xkeyboard memory cpu wlan battery d
 ;tray-transparent = true
 ;tray-background = #0063ff
 
-;wm-restack = bspwm
+wm-restack = bspwm
 ;wm-restack = i3
 
 ;override-redirect = true
@@ -80,8 +80,8 @@ inherit = bar/base
 monitor = ${env:MONITOR}
 
 modules-left = bspwm
-modules-center = 
-modules-right = date 
+modules-center =
+modules-right = date
 
 [module/xwindow]
 type = internal/xwindow
