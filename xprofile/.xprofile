@@ -18,4 +18,4 @@ xset s off -dpms &
 wmname LG3D &
 
 #Compositing
-compton -b &
+compton &
