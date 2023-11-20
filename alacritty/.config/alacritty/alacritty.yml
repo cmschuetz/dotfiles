@@ -20,6 +20,9 @@
   # available, otherwise `xterm-256color` is used.
   #TERM: alacritty
 
+window:
+  opacity: 0.9
+
 #window:
   # Window dimensions (changes require restart)
   #
@@ -58,7 +61,7 @@
   # Values for `decorations` (macOS only):
   #     - transparent: Title bar, transparent background and title bar buttons
   #     - buttonless: Title bar, transparent background and no title bar buttons
-  #decorations: full
+  decorations: buttonless
 
   # Startup Mode (changes require restart)
   #
@@ -75,7 +78,7 @@
   #title: Alacritty
 
   # Allow terminal applications to change Alacritty's window title.
-  #dynamic_title: true
+  dynamic_title: true
 
   # Window class (Linux/BSD only):
   #class:
@@ -147,7 +150,7 @@ font:
     #style: Bold Italic
 
   # Point size
-  #size: 11.0
+  size: 15.0
 
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
@@ -326,7 +329,7 @@ font:
 #
 # Window opacity as a floating point number from `0.0` to `1.0`.
 # The value `0.0` is completely transparent and `1.0` is opaque.
-#background_opacity: 1.0
+#background_opacity: 0.9
 
 #selection:
   # This string contains all characters that are used as separators for
@@ -763,3 +766,30 @@ font:
 
   # Print all received window events.
   #print_events: false
+# BEGIN ACE
+colors:
+  primary:
+    background: '#0E0F17'
+    foreground: '#c4cbe2'
+  cursor:
+    text:       '#0E0F17'
+    cursor:     '#c4cbe2'
+  normal:
+    black:      '#0E0F17'
+    red:        '#91706B'
+    green:      '#606899'
+    yellow:     '#6A7EC1'
+    blue:       '#7987BD'
+    magenta:    '#958186'
+    cyan:       '#9C90A5'
+    white:      '#c4cbe2'
+  bright:
+    black:      '#898e9e'
+    red:        '#91706B'
+    green:      '#606899'
+    yellow:     '#6A7EC1'
+    blue:       '#7987BD'
+    magenta:    '#958186'
+    cyan:       '#9C90A5'
+    white:      '#c4cbe2'
+# END ACE
