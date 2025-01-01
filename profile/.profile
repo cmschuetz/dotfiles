@@ -10,9 +10,6 @@
 #export GOPATH=$HOME/go
 #export PATH=$PATH:$GOPATH/bin/
 
-# Rbenv
-#export PATH="$HOME/.rbenv/shims:${PATH}"
-
 # Erlang / Elixir
 #export ERL_AFLAGS="-kernel shell_history enabled"
 
