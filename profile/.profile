@@ -16,4 +16,6 @@
 # Erlang / Elixir
 #export ERL_AFLAGS="-kernel shell_history enabled"
 
+[ -r ~/.profile_linux ] && . ~/.profile_linux
+[ -r ~/.profile_osx ] && . ~/.profile_osx
 [ -r ~/.profile_local ] && . ~/.profile_local
