@@ -1,0 +1,5 @@
+@import "~/.cache/wal/colors-rofi-dark"
+
+configuration {
+  font: "Fira Mono 11";
+}

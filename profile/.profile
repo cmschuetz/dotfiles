@@ -1,16 +1,16 @@
 #BSPWM panel files
-export PATH=$PATH:~/.config/bspwm/
-export PATH=$PATH:~/.local/bin/
-export PATH="/usr/local/bin:$PATH"
+#export PATH=$PATH:~/.config/bspwm/
+#export PATH=$PATH:~/.local/bin/
+#export PATH="/usr/local/bin:$PATH"
 
 #Polybar Executables
-export PATH=$PATH:~/.config/polybar/
+#export PATH=$PATH:~/.config/polybar/
 
 # Go
-export GOPATH=$HOME/go
-export PATH=$PATH:$GOPATH/bin/
+#export GOPATH=$HOME/go
+#export PATH=$PATH:$GOPATH/bin/
 
 # Erlang / Elixir
-export ERL_AFLAGS="-kernel shell_history enabled"
+#export ERL_AFLAGS="-kernel shell_history enabled"
 
 [ -r ~/.profile_local ] && . ~/.profile_local
