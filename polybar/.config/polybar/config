@@ -10,7 +10,7 @@
 [colors]
 ;background = ${xrdb:color0:#222}
 background = ${xrdb:color0}
-background-alt = ${xrdb:color2}
+background-alt = ${xrdb:color8}
 ;foreground = ${xrdb:color7:#222}
 foreground = ${xrdb:color7}
 foreground-alt = #555
@@ -194,7 +194,7 @@ label = %percentage_used%%
 
 [module/wlan]
 type = internal/network
-interface = net1
+interface = wlp0s20u6
 interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
